@@ -1,8 +1,17 @@
 {
   "name": "lazgold",
   "version": "0.1.0",
-  "private": true,
   "homepage": "http://deeKay93.github.io/lazgold",
+  "author": {
+    "name": "Daniel Knecht",
+    "email": "daniel.knecht@live.de",
+    "url": "https://github.com/deeKay93"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deeKay93/lazgold.git"
+  },
   "dependencies": {
     "@types/jest": "24.0.5",
     "@types/node": "11.9.4",
