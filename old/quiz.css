@@ -1,0 +1,75 @@
+button{
+	margin-top: 10px;
+}
+
+form > div{
+	float: left;
+	width: 100%;
+}
+
+.frage{
+	padding: 10px;
+	background-color: lightgrey;
+}
+
+.image{
+	height: 300px;
+}
+
+.falsch{
+	background-color: #ce5043;
+}
+
+.richtig{
+	background-color: #b3c833;
+}
+
+img{
+}
+
+#buttons{
+	margin-top: 10px;
+}
+
+#FrageDiv{
+	padding-top: 25px;
+	clear: both;
+	position: relative;
+}
+#AlleFragen{
+	overflow: hidden;
+	padding: 5px;
+}
+
+#result{
+	margin-top: 25px;
+	padding: 10px;
+	}
+
+#title{
+	padding: 10px;
+}	
+
+#image{
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+a{
+	margin: 5px;
+	float: left;
+	display: block;
+	padding: 5px;
+	background-color: lightgray;
+	color: black;
+	text-decoration: none;
+}
+
+td {
+padding-right: 10px;
+}
+
+
+						
+label{  }

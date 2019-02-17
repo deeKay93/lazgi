@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
+ <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script language="javascript" type="text/javascript" src="gf.js"></script>
+<script language="javascript" type="text/javascript" src="masch.js"></script>
+<script language="javascript" type="text/javascript" src="mann.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#result").hide();
+	$("#FrageDiv").hide();
+	
+	
+	
+	var abc = ['a','b','c','d','e','f','g','h','i','j','k'];
+	var red = "background-color: #ce5043;";
+	var green = "background-color: #b3c833;";
+	var currentQuestion = 0;
+	var holder = new Array();
+	var myUser;
+	var checkedQuestions = 0;
+	var correctQuestions = 0;
+	
+	User = function(){
+		this.fragen = new Array(holder.lenght);
+		
+		this.setFrage = function(userFrage){
+			this.fragen[userFrage.number] = userFrage;
+		}	
+		
+		this.getFrage = function(id){
+			return this.fragen[id];
+		}
+	}
+	
+	UserFrage = function(nummer, antworten, richtig, checked){	
+		this.number =  nummer;
+		this.answers = antworten;
+		this.correct = richtig;
+		this.checked = checked;
+	}
+	
+	UserAntwort =function(question, selected, correct){
+		this.frage = question;
+		this.gewaehlt = selected;
+		this.richtig = correct;
+	}
+	
+	contains = function(array, value){
+		    var i = array.length;
+    while (i--) {
+       if (array[i] == value) {
+           return true;
+       }
+    }
+    return false;
+	}
+
+
+   select = function() {
+ 
+  
+	var title = "";
+   
+	var sel = document.getElementById('sel');
+	switch (sel.value) {
+		case "gf":
+			$("#title").text("Gruppenführer");
+			holder = gf;
+			break;
+		case "masch":
+			$("#title").text("Machinist");
+			holder = masch;
+			break;
+		case "mann":
+			$("#title").text("Mannschaft");
+			holder = mann;
+			break;
+	}
+	myUser = new User();
+
+	
+
+		$("#AlleFragen").html("");
+	
+	for(var i=0;i<holder.length;i++){
+		var html = "<a id=\"link"+i+"\" href=\"javascript:setQuestion("+i+")\">"
+		if(i<9) html+="0";
+		html+=(i+1)+"</a>";
+		$("#AlleFragen").append(html);
+	}
+	
+	checkedQuestions = 0;
+	correctQuestions = 0;
+	setQuestion(0);
+	refreshResult();
+	
+	$("#result").show();
+	$("#FrageDiv").show();
+   }
+	
+
+	checkQuestion = function(question){
+		checkedQuestions++;
+		
+		var frage = document.getElementById("Frage"+question);
+		var allCorrect = true;		
+		document.getElementById("button"+question).disabled = true;
+		var antworten = new Array(frage.answer.length);
+		
+		for (var i=0;i<frage.answer.length; i++){
+			var correct = (contains(holder[question].loesungen, abc[i])==frage.answer[i].checked);
+			var answer = frage.answer[i];
+			answer.disabled=true;
+			if(correct){
+				$("#answer"+question+""+i).removeClass("falsch");
+				$("#answer"+question+""+i).addClass("richtig");
+			}else{
+				$("#answer"+question+""+i).removeClass("richtig");
+				$("#answer"+question+""+i).addClass("falsch");
+				allCorrect = false;
+			}
+			var correctInt = 0;
+			if(correct) correctInt = 1;
+			else correctInt = -1;
+			antworten[i] = new UserAntwort(question, frage.answer[i].checked, correctInt);
+		}
+			if(allCorrect){
+				$("#frage"+question).removeClass("falsch");
+				$("#link"+question).removeClass("falsch");
+				$("#frage"+question).addClass("richtig");
+				$("#link"+question).addClass("richtig");
+				correctQuestions++;
+			}else{
+				$("#frage"+question).removeClass("richtig");	
+				$("#link"+question).removeClass("richtig");
+				$("#frage"+question).addClass("falsch");
+				$("#link"+question).addClass("falsch");
+			}
+			var correctInt = 0;
+			if(allCorrect) correctInt = 1;
+			else correctInt = -1;
+			
+			var userFrage = new UserFrage(question, antworten, correctInt, true)
+			myUser.setFrage(userFrage);
+			refreshResult();
+		}
+	
+	checkQuestionIntern = function(question){
+		if(currentQuestion!=question.number){
+		checkedQuestions++;
+		var allCorrect = true;		
+		var antworten = new Array(question.answers.length);
+			
+		for (var i=0;i<question.answers.length; i++){
+			var correct = (contains(holder[question.number].loesungen, abc[i])==question.answers[i].gewaehlt);
+			var answer = question.answers[i];
+			answer.disabled=true;
+			if(!correct){
+				allCorrect = false;
+			}
+			var correctInt = 0;
+			if(correct) correctInt = 1;
+			else correctInt = -1;
+			antworten[i] = new UserAntwort(question.number, question.answers[i].gewaehlt, correctInt);
+		}
+
+			var correctInt = 0;
+			if(allCorrect){
+				$("#link"+question).removeClass("falsch");
+				$("#link"+question).addClass("richtig");
+				correctInt = 1;
+				correctQuestions++;
+				}
+			else{
+				$("#link"+question).removeClass("falsch");
+				$("#link"+question).addClass("richtig");
+			correctInt = -1;
+			}
+			var userFrage = new UserFrage(question.number, antworten, correctInt, true)
+			myUser.setFrage(userFrage);
+			refreshResult();
+	}else{
+		checkQuestion(question.number);
+	}
+	}
+	
+	setQuestion = function(question){	
+	  $(".formFrage").html("");
+				$(".frage").removeClass("falsch");
+				$(".frage").removeClass("richtig");
+		currentQuestion = question;
+		
+		var image = holder[currentQuestion].bild;
+		var containsImage = (image!=null);
+		
+		$("#fragenTitle").html(holder[currentQuestion].frage+"<br/><br/>");
+		$(".frage").attr("id","frage"+currentQuestion);
+		$(".formFrage").attr("id","Frage"+currentQuestion);
+		 
+	   for(var j=0;j<holder[currentQuestion].antworten.length;j++){
+		$(".formFrage").append("<div id=\"answer"+currentQuestion+""+j+"\"><input name=\"answer\" type=\"checkbox\">"+holder[currentQuestion].antworten[j]+"</input></div><br/>");
+	   }
+		$(".formButton").attr("id","button"+currentQuestion);
+		$(".formButton").attr("onClick","checkQuestion("+currentQuestion+")");  
+	    $(".formButton").prop('disabled', false);
+		
+	if(containsImage){
+		$("image").html("<img src=\""+image+"\" alt=\"Bild Frage Nr"+(currentQuestion+1)+"\"/>");
+		$("frage"+question).attr("class", "frage image");
+	}
+	  var frage = document.getElementById("Frage"+question);
+	  var frageByUser = myUser.getFrage(question);
+	  if(frageByUser!=null){
+		if(frageByUser.correct==1){
+				$("#frage"+question).removeClass("falsch");
+				$("#frage"+question).addClass("richtig");
+		}
+		if(frageByUser.correct==-1){
+				$("#frage"+question).removeClass("richtig");
+				$("#frage"+question).addClass("falsch");
+		}
+		for (var i=0;i<frage.answer.length; i++){
+			var answer = frage.answer[i];
+			if(frageByUser.answers[i].richtig!=0) answer.disabled=true;
+			answer.checked=frageByUser.answers[i].gewaehlt;
+			if(frageByUser.answers[i].richtig==1){
+				$("#answer"+question+""+i).removeClass("falsch");
+				$("#answer"+question+""+i).addClass("richtig");
+			}
+			if(frageByUser.answers[i].richtig==-1){
+				$("#answer"+question+""+i).removeClass("richtig");
+				$("#answer"+question+""+i).addClass("falsch");
+			}
+		}
+	  if(frageByUser.correct!=0) $("#button"+question).prop('disabled', true);
+		
+	  }
+	  
+	  
+	if(question==0){
+		$("#buttonPrev").prop('disabled', true);
+	}else{
+		$("#buttonPrev").prop('disabled', false);	
+	}
+	if(question==holder.length-1){
+		$("#buttonNext").prop('disabled', true);
+	}else{
+		$("#buttonNext").prop('disabled', false);		
+	}	
+		
+	}
+		
+	nextQuestion = function(){
+		setQuestion(currentQuestion+1);	
+	}
+	prevQuestion = function(){
+		setQuestion(currentQuestion-1);		
+	}
+	
+	checkWhole = function(){
+			var missingNumbers = "";
+			var unchecked = new Array();
+			var allChecked = true;
+			
+		for(var i=0;i<holder.length;i++){
+			var frage = myUser.fragen[i];
+			if(frage==null) missingNumbers += (i+1)+", ";
+			else if(frage.correct==0){
+			allChecked = false;
+			unchecked[unchecked.length] = frage;
+				}
+		}
+		if(missingNumbers!="") alert("Fehlende Fragen: "+missingNumbers);			
+		if(unchecked.length!=0){	
+			if (confirm('Achtung: Alle bereits angeschaute Fragen werden überprüft! Fortfahren?')) {
+				for(var i=0;i<unchecked.length;i++){
+					checkQuestionIntern(unchecked[i]);				
+				}
+			allChecked = true;
+			}
+		}else{
+			allChecked = true;
+		}
+		
+	refreshResult();
+	}
+	
+	refreshResult = function(){
+		var bestanden = "";
+		
+		var percent = (correctQuestions*100)/checkedQuestions;
+		if(isNaN(percent)) percent=0;
+		if(percent>=75){
+			bestanden = "Ja";
+			$("#result").removeClass("falsch");
+			$("#result").addClass("richtig");
+		}
+		else{			
+			bestanden = "Nein";
+			$("#result").removeClass("richtig");
+			$("#result").addClass("falsch");
+		}
+
+		$("#resultControlled").text(checkedQuestions);
+		$("#resultCorrect").text(correctQuestions);
+		$("#resultPercent").text(percent+"%");
+		$("#resultPassed").text(bestanden);
+
+	}
+	
+	});
+   </script>
+<link rel="stylesheet" href="quiz.css" type="text/css">
+</head>
+<body style="margin:10px 20%">
+<p>
+<select id="sel" onchange="select()">
+   <option value="" disabled selected>Bitte Fragebogen auswählen...</option>
+   <option value="gf">Gruppenführer</option>
+   <option value="masch">Maschinist</option>
+   <option value="mann">Mannschaft</option>
+</select></p>
+<div><h2 id="title"></h2></div>
+<div id="AlleFragen"></div>
+<div id="FrageDiv">
+	<div class="frage">
+		<div id="fragenTitle"></div>
+		<div class="answers">
+			<form class="formFrage" action="javascript:void(0)"></form>
+			<button class="formButton">Frage prüfen</button>
+		</div>
+		<div id="image"></div> 
+	</div>
+</div>
+<div id="buttons">
+<button id="buttonPrev" onclick="prevQuestion()">Zurück</button>
+<button id="buttonNext" onclick="nextQuestion()">Weiter</button>
+<button id="buttonWhole" onclick="checkWhole()" disabled title="Momentan nicht verfügbar">Gesamtergebnis prüfen</button>
+</div>
+<div id="result">
+<table><tbody>
+<tr><td>Bisher kontrolliert</td><td id="resultControlled"></td></tr>
+<tr><td>Davon richtig</td><td id="resultCorrect"></td></tr>
+<tr><td>In Prozent</td><td id="resultPercent"></td></tr>
+<tr><td>Bestanden</td><td id="resultPassed"></td></tr>
+</tbody></table></div>
+</body>
+</html>
