@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { StoreState } from "../../state/store";
 import { Dispatch, AnyAction } from "redux";
 import { SidePanelAction, closeSidePanel } from "../../state/actions/UiActions";
-import Sidepanel from "../../components/Sidepanel/Sidepanel";
+import Sidepanel from "../../components/App/Sidepanel/Sidepanel";
 
 function mapStateToProps({ ui: { sidepanelOpen } }: StoreState) {
   return {

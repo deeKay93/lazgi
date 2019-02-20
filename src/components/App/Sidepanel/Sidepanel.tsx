@@ -5,12 +5,9 @@ import MailIcon from "@material-ui/icons/Mail";
 import React, { Component } from "react";
 
 const styles = createStyles({
-    list: {
+    sidebar: {
       width: 250,
-    },
-    fullList: {
-      width: 'auto',
-    },
+    }
   });
 
 
@@ -25,7 +22,7 @@ class SidePanel extends Component<Props, {}> {
     const { classes } = this.props;
     const sideList = (
         <div>
-          <List className={classes.list}>
+          <List>
             {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
                 <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
@@ -34,18 +31,10 @@ class SidePanel extends Component<Props, {}> {
             ))}
           </List>
           <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
         </div>
       );
     return (
-        <Drawer open={this.props.open} onClose={this.props.onClose}>
+        <Drawer classes={{paper: classes.sidebar}} open={this.props.open} onClose={this.props.onClose}>
           <div
             tabIndex={0}
             role="button"
