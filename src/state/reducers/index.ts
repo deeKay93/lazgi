@@ -1,7 +1,9 @@
-import { uiReducer } from "./UiReducer";
-import { quizReducer } from "./QuizReducer";
+import { uiReducer } from './UiReducer';
+import { aufgabenReducer } from './AufgabenReducer';
+import { antwortenReducer } from './AntwortenReducer';
 
 export const reducers = {
-    ui: uiReducer,
-    quiz: quizReducer
-}
+	ui: uiReducer,
+	aufgaben: aufgabenReducer,
+	antworten: antwortenReducer
+};

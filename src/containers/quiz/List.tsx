@@ -1,49 +1,53 @@
-import { connect } from "react-redux";
-import { Dispatch } from "redux";
-import MenuIcon from "@material-ui/icons/Menu";
-import { SidePanelAction, closeSidePanel, openSidePanel } from "../../state/actions/UiActions";
-import React, { Component } from "react";
-import { IconButton, createStyles, withStyles, WithStyles } from "@material-ui/core";
-import { StoreState, Frage as iFrage, FragenListe } from "../../state/types";
-import Frage from "../../components/Quiz/Frage";
-import { addAnswer, QuizAction, removeAnswer, checkAnswer } from "../../state/actions/QuizActions";
+import { createStyles, withStyles, WithStyles } from '@material-ui/core';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Dispatch } from 'redux';
+import AufgabenCard from '../../components/Quiz/AufgabenCard';
+import { addAnswer, checkAnswer, removeAnswer, AnswerAction } from '../../state/actions/AntwortenActions';
+import { AufgabenState, StoreState, AntwortenState } from '../../state/types';
 
 const styles = createStyles({});
 
-function mapStateToProps({ quiz }: StoreState) {
-  return {
-    fragen: quiz.fragen
-  };
+function mapStateToProps({ aufgaben, antworten }: StoreState) {
+	return {
+		aufgaben,
+		antworten
+	};
 }
 
-function mapDispatchToProps(dispatch: Dispatch<QuizAction>) {
-  return {
-    select: (frage: number, antwort: string) => dispatch(addAnswer(frage, antwort)),
-    unselect: (frage: number, antwort: string) => dispatch(removeAnswer(frage, antwort)),
-    check: (frage: number) => dispatch(checkAnswer(frage))
-  };
+function mapDispatchToProps(dispatch: Dispatch<AnswerAction>) {
+	return {
+		select: (aufgabe: number, antwort: string) => dispatch(addAnswer(aufgabe, antwort)),
+		unselect: (aufgabe: number, antwort: string) => dispatch(removeAnswer(aufgabe, antwort)),
+		check: (aufgabe: number) => dispatch(checkAnswer(aufgabe))
+	};
 }
 
 interface Props extends WithStyles<typeof styles> {
-  fragen: FragenListe;
-  select: (frage: number, antwort: string) => void;
-  unselect: (frage: number, antwort: string) => void;
-  check: (frage: number) => void;
+	aufgaben: AufgabenState;
+	antworten: AntwortenState;
+	select: (aufgabe: number, antwort: string) => void;
+	unselect: (aufgabe: number, antwort: string) => void;
+	check: (aufgabe: number) => void;
 }
 
 class List extends Component<Props> {
-  render() {
-    const { fragen } = this.props;
-    return (
-      <div>
-        {Object.values(fragen).map(frage => (
-          <Frage key={frage.nr} frage={frage} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />
-        ))}
-      </div>
-    );
-  }
+	render() {
+		const { aufgaben, antworten } = this.props;
+		return (
+			<div>
+				{Object.values(aufgaben).map((aufgabe) => (
+					<AufgabenCard
+						key={aufgabe.nr}
+						aufgabe={aufgabe}
+						antwort={antworten[aufgabe.nr] || []}
+						select={this.props.select}
+						unselect={this.props.unselect}
+						check={this.props.check}
+					/>
+				))}
+			</div>
+		);
+	}
 }
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withStyles(styles)(List));
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(List));

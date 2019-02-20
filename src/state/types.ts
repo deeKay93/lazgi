@@ -1,24 +1,26 @@
 export interface StoreState {
-  ui: UiState;
-  quiz: QuizState;
+	ui: UiState;
+	aufgaben: AufgabenState;
+	antworten: AntwortenState;
 }
 
 export interface UiState {
-  sidepanelOpen: boolean;
+	sidepanelOpen: boolean;
 }
 
-export interface Frage {
-  nr: number;
-  frage: string;
-  auswahl: { [key: string]: string };
-  loesungen: Array<string>;
-  antworten: Array<string>;
-  geprueft: boolean;
-  korrekt: boolean;
+export interface Aufgabe {
+	nr: number;
+	frage: string;
+	auswahl: { [key: string]: string };
+	loesung: Antwort;
 }
 
-export type FragenListe = Array<Frage>;
+export interface AufgabenState {
+	[key: number]: Aufgabe;
+}
 
-export interface QuizState {
-  fragen: FragenListe;
+export type Antwort = Array<string>;
+
+export interface AntwortenState {
+	[key: number]: Antwort;
 }
