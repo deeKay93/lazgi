@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/lazgold/precache-manifest.4e5e6f12af3f608274ad48b0e9e59e2d.js"
+  "/lazgold/precache-manifest.824660338cbcd3b3253a4cf174f7679d.js"
 );
 
 workbox.clientsClaim();

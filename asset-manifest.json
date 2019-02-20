@@ -1,14 +1,13 @@
 {
-  "main.css": "/lazgold/static/css/main.594ddcea.chunk.css",
-  "main.js": "/lazgold/static/js/main.60da230d.chunk.js",
-  "main.js.map": "/lazgold/static/js/main.60da230d.chunk.js.map",
+  "main.css": "/lazgold/static/css/main.9b54d6ff.chunk.css",
+  "main.js": "/lazgold/static/js/main.ac57a7b8.chunk.js",
+  "main.js.map": "/lazgold/static/js/main.ac57a7b8.chunk.js.map",
   "runtime~main.js": "/lazgold/static/js/runtime~main.aba70a1b.js",
   "runtime~main.js.map": "/lazgold/static/js/runtime~main.aba70a1b.js.map",
-  "static/js/2.ba1ca5ba.chunk.js": "/lazgold/static/js/2.ba1ca5ba.chunk.js",
-  "static/js/2.ba1ca5ba.chunk.js.map": "/lazgold/static/js/2.ba1ca5ba.chunk.js.map",
+  "static/js/2.7d9a396b.chunk.js": "/lazgold/static/js/2.7d9a396b.chunk.js",
+  "static/js/2.7d9a396b.chunk.js.map": "/lazgold/static/js/2.7d9a396b.chunk.js.map",
   "index.html": "/lazgold/index.html",
-  "precache-manifest.4e5e6f12af3f608274ad48b0e9e59e2d.js": "/lazgold/precache-manifest.4e5e6f12af3f608274ad48b0e9e59e2d.js",
+  "precache-manifest.824660338cbcd3b3253a4cf174f7679d.js": "/lazgold/precache-manifest.824660338cbcd3b3253a4cf174f7679d.js",
   "service-worker.js": "/lazgold/service-worker.js",
-  "static/css/main.594ddcea.chunk.css.map": "/lazgold/static/css/main.594ddcea.chunk.css.map",
-  "static/media/logo.svg": "/lazgold/static/media/logo.5d5d9eef.svg"
+  "static/css/main.9b54d6ff.chunk.css.map": "/lazgold/static/css/main.9b54d6ff.chunk.css.map"
 }
