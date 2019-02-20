@@ -6,7 +6,9 @@ import React, { Component } from "react";
 import Sidepanel from "../../containers/Sidepanel/Sidepanel";
 import store from "../../state/store";
 import { openSidePanel, closeSidePanel } from "../../state/actions/UiActions";
-import Header from "./Header/Header";
+import Header from "../Header/Header";
+import List from "../../containers/quiz/List";
+import Footer from "../Footer/Footer";
 
 const styles = createStyles({
   root: {
@@ -35,6 +37,8 @@ class App extends Component<Props> {
         <div className="App">
           <Sidepanel />
           <Header />
+          <List />
+          <Footer />
         </div>
       </React.Fragment>
     );

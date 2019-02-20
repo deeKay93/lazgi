@@ -1,10 +1,10 @@
 import { connect } from "react-redux";
-import { StoreState } from "../../state/store";
 import { Dispatch } from "redux";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SidePanelAction, closeSidePanel, openSidePanel } from "../../state/actions/UiActions";
 import React, { Component } from "react";
 import { IconButton, createStyles, withStyles, WithStyles } from "@material-ui/core";
+import { StoreState } from "../../state/types";
 
 const styles = createStyles({
   menuButton: {

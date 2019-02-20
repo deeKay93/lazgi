@@ -1,11 +1,9 @@
-import { UiState } from "./reducers/UiReducer";
+
 import { createStore, combineReducers, Store, applyMiddleware } from "redux";
 import { reducers } from "./reducers";
 import { AllActions } from "./actions";
+import { StoreState } from "./types";
 
-export interface StoreState {
-  ui: UiState;
-}
 
 // Build Reducer
 const reducer = combineReducers<StoreState>(reducers);

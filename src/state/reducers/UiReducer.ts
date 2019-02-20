@@ -1,8 +1,7 @@
 import { UIAction, UI_OPEN_SIDEPANEL, UI_CLOSE_SIDEPANEL } from "../actions/UiActions";
+import { UiState } from "../types";
 
-export interface UiState {
-  sidepanelOpen: boolean;
-}
+
 
 const defaultState = {
     sidepanelOpen: false

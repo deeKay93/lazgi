@@ -1,6 +1,6 @@
 import { AppBar, IconButton, Toolbar, Typography, withStyles, WithStyles, createStyles } from "@material-ui/core";
 import React, { Component } from "react";
-import SidepanelButton from "../../../containers/Sidepanel/SidepanelButton";
+import SidepanelButton from "../../containers/Sidepanel/SidepanelButton";
 
 const styles = createStyles({
   root: {
@@ -11,16 +11,15 @@ const styles = createStyles({
   }
 });
 
-export interface Props extends WithStyles<typeof styles> {
-}
+export interface Props extends WithStyles<typeof styles> {}
 
 class Header extends Component<Props> {
   render() {
-    const { classes} = this.props;
+    const { classes } = this.props;
     return (
-      <AppBar position="static">
+      <AppBar position="sticky">
         <Toolbar>
-            <SidepanelButton />
+          <SidepanelButton />
           <Typography variant="h6" color="inherit" className={classes.grow}>
             News
           </Typography>
