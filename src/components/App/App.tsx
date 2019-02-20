@@ -4,7 +4,9 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import MenuIcon from "@material-ui/icons/Menu";
 import React, { Component } from "react";
 import "./App.css";
-import Sidepanel from "../Sidepanel/Sidepanel";
+import Sidepanel from "../../containers/Sidepanel/Sidepanel";
+import store from "../../state/store";
+import { openSidePanel, closeSidePanel } from "../../state/actions/UiActions";
 
 const styles = createStyles({
   root: {
@@ -20,22 +22,17 @@ const styles = createStyles({
 });
 
 export interface Props extends WithStyles<typeof styles> {}
-export interface State {
-  drawerOpen: boolean
-}
-
-class App extends Component<Props, State>{
+class App extends Component<Props>{
   constructor(props: Props) {
     super(props);
-    this.state = {
-      drawerOpen: false
-    }
   }
 
   toggleDrawer = (open: boolean) => () => {
-    this.setState({
-      drawerOpen: open,
-    });
+    if(open){
+      store.dispatch(openSidePanel());
+    }else{
+      store.dispatch(closeSidePanel());
+    }
   };
 
   render(){
@@ -44,7 +41,7 @@ class App extends Component<Props, State>{
       <React.Fragment>
         <CssBaseline />
         <div className="App">
-          <Sidepanel onClose={this.toggleDrawer(false)} open={this.state.drawerOpen} ></Sidepanel>
+          <Sidepanel></Sidepanel>
           <AppBar position="static">
             <Toolbar>
               <IconButton className={classes.menuButton}  onClick={this.toggleDrawer(true)} color="inherit" aria-label="Menu">
