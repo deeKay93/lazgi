@@ -1,12 +1,11 @@
+import { Avatar, createStyles, withStyles, WithStyles } from "@material-ui/core";
+import green from "@material-ui/core/colors/green";
+import pink from "@material-ui/core/colors/pink";
+import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import MenuIcon from "@material-ui/icons/Menu";
-import { SidePanelAction, closeSidePanel, openSidePanel } from "../../state/actions/UiActions";
-import React, { Component } from "react";
-import { IconButton, createStyles, withStyles, WithStyles, Avatar } from "@material-ui/core";
-import { StoreState, Frage as iFrage } from "../../state/types";
-import Frage from "../../components/Quiz/Frage";
-import classes from "*.module.css";
+import { SidePanelAction } from "../../state/actions/UiActions";
+import { FragenListe, StoreState } from "../../state/types";
 
 const styles = createStyles({
   list: {
@@ -19,6 +18,12 @@ const styles = createStyles({
     fontSize: "1rem",
     marginRight: 1,
     marginLeft: 1
+  },
+  wrongAvatar: {
+    backgroundColor: pink[500]
+  },
+  correctAvatar: {
+    backgroundColor: green[500]
   }
 });
 
@@ -33,7 +38,7 @@ function mapDispatchToProps(dispatch: Dispatch<SidePanelAction>) {
 }
 
 interface Props extends WithStyles<typeof styles> {
-  fragen: iFrage[];
+  fragen: FragenListe;
 }
 
 class CompactList extends Component<Props> {
@@ -41,8 +46,8 @@ class CompactList extends Component<Props> {
     const { fragen, classes } = this.props;
     return (
       <div className={classes.list}>
-        {fragen.map(frage => (
-          <Avatar className={classes.item} key={frage.nr}>
+        {Object.values(fragen).map(frage => (
+          <Avatar className={`${classes.item} ${!frage.geprueft ? "" : frage.korrekt ? classes.correctAvatar : classes.wrongAvatar}`} key={frage.nr}>
             {frage.nr}
           </Avatar>
         ))}

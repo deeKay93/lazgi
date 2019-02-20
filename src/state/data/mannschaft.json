@@ -1,7 +1,7 @@
 [{
     "nr": 1,
     "frage": "Wer ist nach dem Feuerwehrgesetz Baden-Württemberg für die Aufstellung, Ausrüstung und Unterhaltung der Feuerwehr verantwortlich?",
-    "antworten": {
+    "auswahl": {
         "a": "Bund",
         "b": "Land",
         "c": "Kreis",
@@ -12,7 +12,7 @@
 }, {
     "nr": 2,
     "frage": "Welches sind Rechtsgrundlagen der Feuerwehr?",
-    "antworten": {
+    "auswahl": {
         "a": "Bürgerliches Gesetzbuch",
         "b": "Feuerwehrgesetz Baden-Württemberg",
         "c": "Feuerwehrsatzung der Gemeinde",
@@ -22,7 +22,7 @@
 }, {
     "nr": 3,
     "frage": "Welche der nachfolgenden Aufgaben gehören nicht zu den Pflichtaufgaben der Feuerwehr?",
-    "antworten": {
+    "auswahl": {
         "a": "Bekämpfung von Schadenfeuer",
         "b": "Rettung von Menschen aus lebensbedrohlichen Lagen",
         "c": "Feuersicherheitsdienst",
@@ -32,7 +32,7 @@
 }, {
     "nr": 4,
     "frage": "Was gehört zu den Dienstpflichten eines ehrenamtlich tätigen Angehörigen der Gemeindefeuerwehr?",
-    "antworten": {
+    "auswahl": {
         "a": "Am Dienst einschließlich Aus- und Fortbildung regelmäßig und pünktlich teilnehmen",
         "b": "Den dienstlichen Weisungen des Vorgesetzten nachkommen",
         "c": "Bei Alarm unverzüglich zum Gerätehaus kommen",
@@ -43,7 +43,7 @@
 }, {
     "nr": 5,
     "frage": "Welches Wahlrecht hat ein aktiver Feuerwehrangehöriger nach dem Feuerwehrgesetz Baden-Württemberg?",
-    "antworten": {
+    "auswahl": {
         "a": "Wahl des Kommandanten und dessen Stellvertreter",
         "b": "Wahl des Zugführers",
         "c": "Wahl des Gruppenführers",
@@ -57,7 +57,7 @@
 }, {
     "nr": 6,
     "frage": "Welche Pflichten obliegen der Bevölkerung nach dem Feuerwehrgesetz Baden-Württemberg?",
-    "antworten": {
+    "auswahl": {
         "a": "Obdachlose aufnehmen",
         "b": "Meldepflicht",
         "c": "Hilfeleistungspflicht",
@@ -68,7 +68,7 @@
 }, {
     "nr": 7,
     "frage": "Wo ist der friedensmäßige Katastrophenschutz in Baden-Württemberg geregelt?",
-    "antworten": {
+    "auswahl": {
         "a": "Im Feuerwehrgesetz Baden-Württemberg (FwG)",
         "b": "Im Landeskatastrophenschutzgesetz (LKatSG)",
         "c": "Im Gesetz über die Erweiterung des Katastrophenschutzgesetzes"
@@ -77,7 +77,7 @@
 }, {
     "nr": 8,
     "frage": "Welche Aufgaben können von der Feuerwehr im Katastrophenschutz übernommen werden?",
-    "antworten": {
+    "auswahl": {
         "a": "ABC-Dienst",
         "b": "Sanitätsdienst",
         "c": "Versorgungsdienst",
@@ -90,7 +90,7 @@
 }, {
     "nr": 9,
     "frage": "Wie werden Einheiten in der Feuerwehr bezeichnet?",
-    "antworten": {
+    "auswahl": {
         "a": "Trupp",
         "b": "Feuerwehr-Kompanie",
         "c": "Zug",
@@ -104,7 +104,7 @@
 }, {
     "nr": 10,
     "frage": "Farbige Westen kennzeichnen die verschiedenen Führungsebenen im Feuerwehreinsatz. Welche der folgenden Kombinationen ist richtig?",
-    "antworten": {
+    "auswahl": {
         "a": "Einsatzleiter = gelb; Fahrzeugführer = grün; Abschnittsleiter = weiß",
         "b": "Fahrzeugführer = blau; Einsatzleiter = rot; Abschnittsleiter = gelb",
         "c": "Fahrzeugführer = blau; Abschnittsleiter = weiß; Einsatzleiter = gelb"
@@ -113,7 +113,7 @@
 }, {
     "nr": 11,
     "frage": "Woraus ergeben sich die Ausbildungsrichtlinien für Freiwillige Feuerwehren?",
-    "antworten": {
+    "auswahl": {
         "a": "Feuerwehrgesetz Baden-Württemberg",
         "b": "Unfallverhütungsvorschrift \"Feuerwehr\"",
         "c": "Normblätter",
@@ -125,7 +125,7 @@
 }, {
     "nr": 12,
     "frage": "Wie erkennen Sie, dass der Gruppenführer einen Einsatz ohne Bereitstellung durchführen will?",
-    "antworten": {
+    "auswahl": {
         "a": "Durch Angabe der Wasserentnahmestelle",
         "b": "An der Lage des Verteilers",
         "c": "Durch die Worte \"zum Einsatz fertig\"",
@@ -135,7 +135,7 @@
 }, {
     "nr": 13,
     "frage": "Welche Aufgaben hat der Angriffstrupp innerhalb der Löschgruppe?",
-    "antworten": {
+    "auswahl": {
         "a": "Er ist verantwortlich für die Wasserversorgung zwischen Verteiler und den Strahlrohren",
         "b": "Er rettet; insbesondere aus Bereichen, die nur mit Atemschutzgeräten betreten werden können, er nimmt das erste Rohr vor, er setzt den Verteiler",
         "c": "Er ist für die Verkehrssicherung verantwortlich",
@@ -145,7 +145,7 @@
 }, {
     "nr": 14,
     "frage": "Welche Aufgabe hat der Melder innerhalb der Löschgruppe?",
-    "antworten": {
+    "auswahl": {
         "a": "Er bedient grundsätzlich den Verteiler",
         "b": "Er bildet mit dem Maschinisten einen Trupp",
         "c": "Er übernimmt befohlene Aufgaben, z.B. Übermittlung von Nachrichten (Befehle, Lagemeldungen), Betreuung von Personen",
@@ -156,7 +156,7 @@
 }, {
     "nr": 15,
     "frage": "Untrügliches Zeichen dafür, dass das Löschmittel Wasser seine Wirkung getan hat, ist die Dampfbildung über dem Brandherd. Es gilt \"Wasser halt!\", wenn:",
-    "antworten": {
+    "auswahl": {
         "a": "Sich weder Rauch noch Dampf mehr über dem Brandherd bildet",
         "b": "Eine deutlich erkennbare Wasserschicht über dem brennbaren Material aufgebracht wurde",
         "c": "Kein dunkler Rauch, sondern nunmehr weißer Wasserdampf über dem Brandherd aufsteigt",
@@ -166,7 +166,7 @@
 }, {
     "nr": 16,
     "frage": "In welcher Bandlage und Verkehrsart wird in Baden-Württemberg der Funkverkehr bei den Feuerwehren im 2 m Bereich durchgeführt?",
-    "antworten": {
+    "auswahl": {
         "a": "Gegenverkehr / Oberband",
         "b": "Wechselverkehr / Unterband",
         "c": "Wechselverkehr / Oberband"
@@ -175,7 +175,7 @@
 }, {
     "nr": 17,
     "frage": "Wie viel Feuerwehrangehörige müssen ein B-Strahlrohr (fünf bis sechs bar)mit Stützkrümmer im Einsatz und bei Übungen halten?",
-    "antworten": {
+    "auswahl": {
         "a": "Zwei",
         "b": "Drei",
         "c": "Nicht vorgeschrieben"
@@ -184,7 +184,7 @@
 }, {
     "nr": 18,
     "frage": "Welche Aufgaben müssen bei Feuersicherheitswachen wahrgenommen werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Kontrolle, dass Flächen und Zufahrten für Feuerwehrfahrzeuge frei sind",
         "b": "Rettungswege freihalten",
         "c": "Streitigkeiten von Festteilnehmern schlichten / verbieten",
@@ -195,7 +195,7 @@
 }, {
     "nr": 19,
     "frage": "Der Sprechfunk wird durch den Anruf eröffnet: Welche Reihenfolge ist richtig (Liste)?",
-    "antworten": {
+    "auswahl": {
         "a": "- Rufnamen/-zeichen der Gegenstelle(n)- Wort \"von\"- Eigener Rufnamen/-zeichen- Aufforderung \"kommen\"",
         "b": "- Rufnamen/-zeichen der Gegenstelle(n)- Aufforderung \"kommen Sie\"- Wort \"für\"- Eigener Rufnamen/-zeichen"
     },
@@ -203,7 +203,7 @@
 }, {
     "nr": 20,
     "frage": "Welche Grundsätze sind bei der Abwicklung des Sprechfunkverkehrs zu beachten?",
-    "antworten": {
+    "auswahl": {
         "a": "Teilnehmer mit Sie anreden",
         "b": "Schnell sprechen, damit das Funkgespräch kurz ist",
         "c": "Zahlen unverwechselbar aussprechen",
@@ -219,7 +219,7 @@
 }, {
     "nr": 21,
     "frage": "Mit welchen Knoten soll eine Schlauchleitung mit Strahlrohr festgebunden werden, um sie in ein Obergeschoss hochzuziehen?",
-    "antworten": {
+    "auswahl": {
         "a": "Zimmermannschlag",
         "b": "Halbschlag",
         "c": "Doppelschlinge und Halbschlag",
@@ -231,7 +231,7 @@
 }, {
     "nr": 22,
     "frage": "Zur Rettung und Sicherung von Personen wird ein Brustbund angelegt. Welche Knoten / Stiche werden zur Sicherung verwendet?",
-    "antworten": {
+    "auswahl": {
         "a": "Zimmermannschlag",
         "b": "Doppelschlinge",
         "c": "Schotenstich",
@@ -241,7 +241,7 @@
 }, {
     "nr": 23,
     "frage": "Welche Knoten und Stiche müssen entsprechend der Richtlinie für die Leistungsübung Silber beim Verlegen der Saugleitung verwendet werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Pfahlstich",
         "b": "Schotenstich",
         "c": "Mastwurf",
@@ -253,7 +253,7 @@
 }, {
     "nr": 24,
     "frage": "Welche Aussage ist richtig?",
-    "antworten": {
+    "auswahl": {
         "a": "Gefahren durch Atemgifte bestehen nur in geschlossenen Räumen",
         "b": "Bei Nachlöscharbeiten muss Atemschutz getragen werden",
         "c": "Stickgase sind mit den menschlichen Sinnen wahrnehmbar",
@@ -263,7 +263,7 @@
 }, {
     "nr": 25,
     "frage": "Wie viel Atemschutzgeräteträger müssen mindestens zur Verfügung stehen, wenn ein Atemschutztrupp eingesetzt werden muss?",
-    "antworten": {
+    "auswahl": {
         "a": "Zwei (ohne Sicherheitstrupp)",
         "b": "Drei",
         "c": "Sechs",
@@ -273,7 +273,7 @@
 }, {
     "nr": 26,
     "frage": "Wie kann ein Feuerwehrangehöriger Sauerstoffmangel bei einem Brand wahrnehmen, beziehungsweise erkennen?",
-    "antworten": {
+    "auswahl": {
         "a": "Er kann es nicht wahrnehmen",
         "b": "Er wird müde",
         "c": "Durch stechenden Geruch"
@@ -282,7 +282,7 @@
 }, {
     "nr": 27,
     "frage": "Wie ist die prozentuale Zusammensetzung der Einatemluft?",
-    "antworten": {
+    "auswahl": {
         "a": "Sauerstoff 17 %",
         "b": "Sauerstoff 21 %",
         "c": "Stickstoff 78 %",
@@ -295,7 +295,7 @@
 }, {
     "nr": 28,
     "frage": "Wie prüft man eine Atemschutzmaske auf Dichtigkeit vor dem Einsatz?",
-    "antworten": {
+    "auswahl": {
         "a": "Da die Atemschutzmaske in der Atemschutzwerkstatt geprüft wurde, ist dies vor dem Einsatz nicht mehr erforderlich",
         "b": "Durch Sichtprüfung",
         "c": "Lungenautomat anschrauben, beide Flaschen schließen und Maskeninnenraum leer atmen",
@@ -305,7 +305,7 @@
 }, {
     "nr": 29,
     "frage": "Wie kann ein Feuerwehrangehöriger die Anzeichen eines Schocks bei einem Verunfallten erkennen?",
-    "antworten": {
+    "auswahl": {
         "a": "Frieren, zittern",
         "b": "Kalter Schweiß, kalte feuchte Haut",
         "c": "Auffallende Unruhe, nicht der Situation entsprechende Reaktionen",
@@ -317,7 +317,7 @@
 }, {
     "nr": 30,
     "frage": "Welche Maßnahmen sind eventuell von einem Feuerwehrangehörigen zu ergreifen, um einem Schock-Verletzten zu helfen?",
-    "antworten": {
+    "auswahl": {
         "a": "Blutstillung",
         "b": "Schock-Lagerung",
         "c": "Wärmeerhaltung",
@@ -332,7 +332,7 @@
 }, {
     "nr": 31,
     "frage": "Sie treffen an einer Einsatzstelle eine bewusstlose Person an. Welche Maßnahmen sind zu ergreifen?",
-    "antworten": {
+    "auswahl": {
         "a": "Herz-Lungen-Wiederbelebung durchführen",
         "b": "Rettung aus dem Gefahrenbereich",
         "c": "Verletzten in stabile Seitenlage bringen",
@@ -346,7 +346,7 @@
 }, {
     "nr": 32,
     "frage": "Welche Maßnahmen sollen bei Personen mit Brandverletzungen durchgeführt werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Verbrannte Körperteile gründlich mit Mehl bestäuben",
         "b": "Verbrannte Körperteile mit Körperschutz-Öl bedecken",
         "c": "Verbrennungen an Armen und Beinen mit viel Wasser drucklos behandeln",
@@ -360,7 +360,7 @@
 }, {
     "nr": 33,
     "frage": "Welche Maßnahmen sind bei starken Blutungen, zum Beispiel aus Armen oder Beinen, durchzuführen?",
-    "antworten": {
+    "auswahl": {
         "a": "Sofort verletzte Körperteile abbinden",
         "b": "Sterile Wundbedeckung auflegen",
         "c": "Mit Verbandspäckchen Kompressionsverband anlegen",
@@ -372,7 +372,7 @@
 }, {
     "nr": 34,
     "frage": "Welche spezielle und persönliche Schutzausrüstung muss je nach Lage und Aufgabe getragen werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Feuerwehr-Sicherheitsschuhwerk",
         "b": "Atemschutzgerät",
         "c": "Beleuchtungsgerät",
@@ -386,7 +386,7 @@
 }, {
     "nr": 35,
     "frage": "Welches Gerät muss der Angriffstrupp beim Schaumrohr-Einsatz mit vornehmen (Liste)?",
-    "antworten": {
+    "auswahl": {
         "a": "Truppführer - Zumischer und D-Ansaugschlauch Truppmann - Schaumrohr",
         "b": "Truppführer - Zumischer, Schaumrohr und D-Ansaugschlauch Truppmann - zwei Schaummittelbehälter",
         "c": "Truppführer - zwei Schaummittelbehälter und D-Ansaugschlauch Truppmann - Schaumrohr und Zumischer"
@@ -395,7 +395,7 @@
 }, {
     "nr": 36,
     "frage": "Welche Warnausrüstungen werden im Allgemeinen zur Einsatzstellenabsicherung verwendet?",
-    "antworten": {
+    "auswahl": {
         "a": "Elektronenblitz-Warngerät",
         "b": "Verkehrsleitkegel mit Reflex-Folie",
         "c": "Verkehrszeichen \"Gefahrstelle\"",
@@ -409,7 +409,7 @@
 }, {
     "nr": 37,
     "frage": "Was müssen Sie beachten bei der Benutzung beziehungsweise beim In-Stellung-Bringen von tragbaren Leitern?",
-    "antworten": {
+    "auswahl": {
         "a": "Fester Untergrund",
         "b": "Anstellwinkel 55° bis 60°",
         "c": "Leiterspitze ca. ein Meter über die Brüstung",
@@ -423,7 +423,7 @@
 }, {
     "nr": 38,
     "frage": "Welche Leiter führt ein Löschgruppenfahrzeug LF 10 nach Norm mit sich?",
-    "antworten": {
+    "auswahl": {
         "a": "Steckleiter 2-teilig",
         "b": "Steckleiter 4-teilig",
         "c": "Schiebleiter 3-teilig",
@@ -435,7 +435,7 @@
 }, {
     "nr": 39,
     "frage": "Wie viel Feuerwehrangehörige (ohne Maschinist)werden benötigt, um eine 4-teilige Steckleiter nach Feuerwehr-Dienstvorschrift 10 \"Tragbare Leitern\" in Stellung zu bringen?",
-    "antworten": {
+    "auswahl": {
         "a": "Zwei Personen",
         "b": "Drei Personen",
         "c": "Drei oder vier Personen",
@@ -446,7 +446,7 @@
 }, {
     "nr": 40,
     "frage": "Druckschläuche zur Förderung von Wasser sind genormt. Bezüglich der Maße sind welche Aussagen richtig?",
-    "antworten": {
+    "auswahl": {
         "a": "Druckschlauch D = 5 m lang, Ø 25 mm",
         "b": "Druckschlauch D = 20 m lang, Ø 25 mm",
         "c": "Druckschlauch C = 15 m lang, Ø 42 mm",
@@ -462,7 +462,7 @@
 }, {
     "nr": 41,
     "frage": "Welche der folgenden Armaturen gehören zur Gruppe: \"Armaturen zur Wasserfortleitung\"?",
-    "antworten": {
+    "auswahl": {
         "a": "Stützkrümmer",
         "b": "Kupplungen",
         "c": "Druckbegrenzungsventil",
@@ -474,7 +474,7 @@
 }, {
     "nr": 42,
     "frage": "An welchem Abgang wird ein Sonderrohr am Verteiler angekuppelt?",
-    "antworten": {
+    "auswahl": {
         "a": "Links",
         "b": "Rechts",
         "c": "Mitte",
@@ -484,7 +484,7 @@
 }, {
     "nr": 43,
     "frage": "Wie ist die sinnvolle Verlegerichtung von Druckschläuchen aus Schlauchtragekörben?",
-    "antworten": {
+    "auswahl": {
         "a": "wird Leitung von anderem Trupp verlegt - vom Strahlrohr in Richtung Verteiler",
         "b": "legt der Trupp die Leitung selbst - vom Verteiler in Richtung Strahlrohr",
         "c": "nicht vorgeschrieben"
@@ -493,7 +493,7 @@
 }, {
     "nr": 44,
     "frage": "Bei tragbaren Schaumstrahlrohren und -geräten kommen als Verschäumungsbereiche in Betracht:",
-    "antworten": {
+    "auswahl": {
         "a": "Schwerschaum = Verschäumungszahl 4 bis 20",
         "b": "Mittelschaum = Verschäumungszahl über 20 bis 200",
         "c": "Leichtschaum = Verschäumungszahl über 20 bis 1000",
@@ -504,7 +504,7 @@
 }, {
     "nr": 45,
     "frage": "Wie lautet das \"Hebel-Gesetz\"?",
-    "antworten": {
+    "auswahl": {
         "a": "Kraft x Kraftarm = Last x Lastarm",
         "b": "Last x Lastarm = Last x Kraftarm",
         "c": "Kraft x Weg = Last x Zeit",
@@ -514,7 +514,7 @@
 }, {
     "nr": 46,
     "frage": "Bei welcher Rolle wird der für die Bewegung erforderliche Kraftaufwand um die Hälfte vermindert?",
-    "antworten": {
+    "auswahl": {
         "a": "Feste Rolle",
         "b": "Lose Rolle",
         "c": "Mehrere Rollen"
@@ -523,7 +523,7 @@
 }, {
     "nr": 47,
     "frage": "Was ist eine Verbrennung?",
-    "antworten": {
+    "auswahl": {
         "a": "Eine Naturerscheinung",
         "b": "Eine physikalische Zersetzung",
         "c": "Ein chemisch-physikalischer Vorgang"
@@ -532,7 +532,7 @@
 }, {
     "nr": 48,
     "frage": "Welche Grundvoraussetzungen müssen für eine Verbrennung vorhanden sein?",
-    "antworten": {
+    "auswahl": {
         "a": "Brennbarer Stoff",
         "b": "Sauerstoff",
         "c": "Richtiges Mischungsverhältnis zwischen brennbarem Stoff und Sauerstoff",
@@ -546,7 +546,7 @@
 }, {
     "nr": 49,
     "frage": "Brennbare Stoffe sind nach ihrem Aggregatzustand und Brandverhalten in Brandklassen eingeteilt. Welche Aussage ist richtig?",
-    "antworten": {
+    "auswahl": {
         "a": "Brandklasse A = feste brennbare Stoffe",
         "b": "Brandklasse A = Flüssigkeiten mit Flammpunkt kleiner 21° C, nicht wasserlöslich",
         "c": "Brandklasse B = alle brennbare, wasserlösliche Flüssigkeiten",
@@ -561,7 +561,7 @@
 }, {
     "nr": 50,
     "frage": "Welche Hauptlöscheffekte kennen Sie?",
-    "antworten": {
+    "auswahl": {
         "a": "Stickeffekt",
         "b": "Knalleffekt",
         "c": "Mischeffekt",
@@ -574,7 +574,7 @@
 }, {
     "nr": 51,
     "frage": "Welche der nachfolgenden Aussagen ist richtig? Aus einem Liter Wasser können bei vollständigem Verdampfen entstehen:",
-    "antworten": {
+    "auswahl": {
         "a": "1.000 Liter Wasserdampf",
         "b": "1.500 Liter Wasserdampf",
         "c": "1.700 Liter Wasserdampf",
@@ -585,7 +585,7 @@
 }, {
     "nr": 52,
     "frage": "Welches der nachfolgenden Gase beziehungsweise Dämpfe hat den größten Zündbereich?",
-    "antworten": {
+    "auswahl": {
         "a": "Propan",
         "b": "Methan",
         "c": "Benzindämpfe",
@@ -598,7 +598,7 @@
 }, {
     "nr": 53,
     "frage": "Welcher Stoff gehört in welche Brandklasse?",
-    "antworten": {
+    "auswahl": {
         "a": "Gummi - Brandklasse C",
         "b": "Koks - Brandklasse A",
         "c": "Wasserstoff - Brandklasse C",
@@ -611,7 +611,7 @@
 }, {
     "nr": 54,
     "frage": "Welche Auswirkung kann Wärme auf Stoffe bei einem Brand hervorrufen?",
-    "antworten": {
+    "auswahl": {
         "a": "Änderung des Aggregatzustandes",
         "b": "Ausdehnung des Stoffes",
         "c": "Änderung der Temperatur",
@@ -623,7 +623,7 @@
 }, {
     "nr": 55,
     "frage": "Wie kann Wärme übertragen werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Wärmeleitung",
         "b": "Flugfeuer",
         "c": "Wärmeströmung",
@@ -633,7 +633,7 @@
 }, {
     "nr": 56,
     "frage": "Welches giftige Gas entsteht hauptsächlich bei einer unvollkommenen Verbrennung und wie ist die chemische Formel des Gases?",
-    "antworten": {
+    "auswahl": {
         "a": "Stickoxid",
         "b": "Kohlenstoffdioxid",
         "c": "Kohlenstoffmonoxid",
@@ -647,7 +647,7 @@
 }, {
     "nr": 57,
     "frage": "Druckgasflaschen werden ihrem Inhalt entsprechend durch Farben gekennzeichnet. Welches Gas ist in roten Druckgasflaschen?",
-    "antworten": {
+    "auswahl": {
         "a": "Sauerstoff",
         "b": "Acetylen",
         "c": "Kohlenstoffdioxid",
@@ -659,7 +659,7 @@
 }, {
     "nr": 58,
     "frage": "Druckgasflaschen haben je nach Inhalt verschiedene Anschlüsse. Welches Gas wird über Manometer mit Bügelanschluss entnommen?",
-    "antworten": {
+    "auswahl": {
         "a": "Kohlenstoffmonoxid",
         "b": "Kohlenstoffdioxid",
         "c": "Sauerstoff",
@@ -671,7 +671,7 @@
 }, {
     "nr": 59,
     "frage": "Was verstehen Sie unter Wärmestrahlung?",
-    "antworten": {
+    "auswahl": {
         "a": "Wärmestrahlung ist nur innerhalb eines Stoffes möglich",
         "b": "Wärmestrahlung ist eine elektromagnetische Welle",
         "c": "Wärmestrahlung ist in Wirkung an ein Medium gebunden",
@@ -681,7 +681,7 @@
 }, {
     "nr": 60,
     "frage": "Welche Arten von Schaummitteln führt die Feuerwehr in der Regel auf ihren Löschfahrzeugen mit?",
-    "antworten": {
+    "auswahl": {
         "a": "Mehrbereichsschaummittel",
         "b": "Sonderschaummittel",
         "c": "Proteinschaummittel",
@@ -691,7 +691,7 @@
 }, {
     "nr": 61,
     "frage": "Welche Verschäumungen (Mehrbereichsschaummittel)können nicht mit einem tragbaren Schaumstrahlrohr hergestellt werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Schwerschaum",
         "b": "Mittelschaum",
         "c": "Leichtschaum"
@@ -700,7 +700,7 @@
 }, {
     "nr": 62,
     "frage": "Was müssen Sie beim Einsatz bei Metallbränden beachten?",
-    "antworten": {
+    "auswahl": {
         "a": "Löschmittel mit hohem Druck aufbringen",
         "b": "Nur Kohlenstoffdioxidlöscher verwenden",
         "c": "Kein Wasser als Löschmittel verwenden",
@@ -711,7 +711,7 @@
 }, {
     "nr": 63,
     "frage": "Welcher Sicherheitsabstand muss von einer elektrischen Anlage (15.000 Volt)mit einem C-Strahlrohr (Sprühstrahl, Mundstückdurchmesser 12 mm, Druck 5 bar)eingehalten werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Ein Meter",
         "b": "Drei Meter",
         "c": "Fünf Meter",
@@ -721,7 +721,7 @@
 }, {
     "nr": 64,
     "frage": "Welche Einsatzgrundsätze sind richtig?",
-    "antworten": {
+    "auswahl": {
         "a": "Menschen- und Tierrettung vor Brandbekämpfung",
         "b": "Außenangriff ist die Regel, damit niemand gefährdet wird",
         "c": "Bei Innenangriff ist Vollstrahl richtig, da die Wurfweite des Löschstrahls erhöht wird",
@@ -734,7 +734,7 @@
 }, {
     "nr": 65,
     "frage": "Durch welche Ursachen können Einstürze entstehen?",
-    "antworten": {
+    "auswahl": {
         "a": "Abbrand von Baustoffen",
         "b": "Lockerung des Baugefüges",
         "c": "Abplatzen von Natursteinen durch Wärmeeinwirkung",
@@ -745,7 +745,7 @@
 }, {
     "nr": 66,
     "frage": "Auf einer Karte mit Maßstab 1:50.000 ist ein Objekt zwei Zentimeter lang. Wie lang ist dieses Objekt in der Wirklichkeit?",
-    "antworten": {
+    "auswahl": {
         "a": "100 Meter",
         "b": "500 Meter",
         "c": "1000 Meter"
@@ -754,7 +754,7 @@
 }, {
     "nr": 67,
     "frage": "Wie lange sind die Seiten eines Planquadrates beim Maßstab 1:50.000?",
-    "antworten": {
+    "auswahl": {
         "a": "Zwei Zentimeter",
         "b": "Vier Zentimeter",
         "c": "Acht Zentimeter"
@@ -763,7 +763,7 @@
 }, {
     "nr": 68,
     "frage": "Mit welchen Hilfsmitteln können Koordinaten festgelegt werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Planzeiger",
         "b": "Kompass",
         "c": "Lineal",
@@ -774,7 +774,7 @@
 }, {
     "nr": 69,
     "frage": "Nennen Sie Vorteile des Unterflurhydranten!",
-    "antworten": {
+    "auswahl": {
         "a": "Geringere Anschaffungskosten als ein Überflurhydrant",
         "b": "Leichtes Auffinden (auch bei Schnee und Dunkelheit)",
         "c": "Behinderung des Verkehrs"
@@ -783,7 +783,7 @@
 }, {
     "nr": 70,
     "frage": "Nennen Sie Vorteile des Überflurhydranten!",
-    "antworten": {
+    "auswahl": {
         "a": "Schnelle Einsatzmöglichkeit",
         "b": "Leichtes Auffinden (auch bei Dunkelheit oder Schnee)",
         "c": "Geringere Anschaffungskosten als ein Unterflurhydrant",
@@ -793,7 +793,7 @@
 }, {
     "nr": 71,
     "frage": "Welche Arten von Hydranten kennen Sie und für welche Zwecke können sie benutzt werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Unterflurhydranten",
         "b": "Überflurhydranten",
         "c": "Schachthydranten (württembergische Unterflurhydranten)",
@@ -803,7 +803,7 @@
 }, {
     "nr": 72,
     "frage": "Welche Bedeutung haben orangefarbene Warntafeln an Lastkraftwagen oder Tankkesselwagen?",
-    "antworten": {
+    "auswahl": {
         "a": "Es wird Abfall transportiert",
         "b": "Es wird kein Gefahrgut transportiert",
         "c": "Es wird Gefahrgut im Sinne der Gefahrgutverordnung Straße (GGVSEB)transportiert",
@@ -813,7 +813,7 @@
 }, {
     "nr": 73,
     "frage": "Welche Bedeutung haben Zahlen und eventuell ein Buchstabe auf orangefarbenen Warntafeln",
-    "antworten": {
+    "auswahl": {
         "a": "Obere Nummer dient zur Kennzeichnung der Gefahr",
         "b": "Untere Nummer dient zur Kennzeichnung des Stoffs",
         "c": "Untere Nummer ist die Stoff-Nummer oder so genannte UN-Nummer",
@@ -823,7 +823,7 @@
 }, {
     "nr": 74,
     "frage": "Wer ist für eine ausreichende Löschwasserversorgung verantwortlich?",
-    "antworten": {
+    "auswahl": {
         "a": "Gebäude-Brandversicherung",
         "b": "Kommandant",
         "c": "Gemeinde",
@@ -833,7 +833,7 @@
 }, {
     "nr": 75,
     "frage": "Welche Arten von Kennzeichnungen beziehungsweise Begleitpapieren können auf einen Gefahrgut-Transport hinweisen?",
-    "antworten": {
+    "auswahl": {
         "a": "Orangefarbene Warntafeln mit und ohne Zahlen",
         "b": "Gefahrzettel nach Gefahrgut-Verordnung-Straße (GGVSEB)",
         "c": "Frachtbrief",
@@ -846,7 +846,7 @@
 }, {
     "nr": 76,
     "frage": "In einem Betrieb sehen Sie ein Behältnis mit einem Totenkopf als Gefahrensymbol. Welche Gefahrenbezeichnung hat dieses Symbol in Bezug auf den Inhalt nach der Gefahrstoff-Verordnung?",
-    "antworten": {
+    "auswahl": {
         "a": "Stark ätzend",
         "b": "Gesundheitsschädlich",
         "c": "Giftig oder sehr giftig",
@@ -858,7 +858,7 @@
 }, {
     "nr": 77,
     "frage": "Wie verhalten Sie sich als Angriffstrupp im Innenangriff, wenn brennende Behältnisse mit Gefahrensymbolen angetroffen werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Sie löschen sofort die Gefahrstoffe",
         "b": "Sie melden die Art der Gefahrstoffe",
         "c": "Sie beschreiben die Gefahrensymbole",
@@ -874,7 +874,7 @@
 }, {
     "nr": 78,
     "frage": "Was bedeutet im Sinne der FwDV die so genannte \"GAMS-Regel\"?",
-    "antworten": {
+    "auswahl": {
         "a": "\"G\" steht für - Gefahr erkennen",
         "b": "\"A\" steht für - Absperren",
         "c": "\"M\" steht für - Menschenrettung durchführen",
@@ -885,7 +885,7 @@
 }, {
     "nr": 79,
     "frage": "Was muss beim Heben von Lasten beachtet werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Sich nicht unter der Last aufhalten",
         "b": "Angehobene Last braucht nicht gesichert zu werden",
         "c": "Bei Hydraulikhebern braucht die Last nicht gesichert werden"
@@ -894,7 +894,7 @@
 }, {
     "nr": 80,
     "frage": "Können Sie an einem Tankfahrzeug mit orangefarbigen Warntafeln erkennen, ob der Tank beziehungsweise die Tankkammern leer sind?",
-    "antworten": {
+    "auswahl": {
         "a": "Ja, da bei leeren Tanks die orangefarbigen Warntafeln verdeckt sein müssen",
         "b": "Nein, in keinem Fall",
         "c": "Ja, da die orangefarbigen Warntafeln nur bei vollem Tank mit Gefahrnummern beziffert sind"
@@ -903,7 +903,7 @@
 }, {
     "nr": 81,
     "frage": "Was beinhaltet die Sichtprüfung an hydraulischen Rettungsgeräten nach einem Einsatz?",
-    "antworten": {
+    "auswahl": {
         "a": "Zustand der Schläuche und Kupplungen",
         "b": "Riffelungen an den Spreizerspitzen",
         "c": "Öldruckkontrolle",
@@ -917,7 +917,7 @@
 }, {
     "nr": 82,
     "frage": "Was muss bei der Überdruckbelüftung beachtet werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Es besteht die Gefahr, dass sich das Feuer durch den Luftstrom schnell ausbreitet",
         "b": "Die Luftaustrittsöffnung darf maximal 1,5fach so groß wie die Eintrittsöffnung sein"
     },
@@ -925,7 +925,7 @@
 }, {
     "nr": 83,
     "frage": "Was ist beim Einsatz mit hydraulischen Rettungsgeräten zu beachten?",
-    "antworten": {
+    "auswahl": {
         "a": "Nur ausgebildete Feuerwehrangehörige am Gerät einsetzen",
         "b": "Nach Möglichkeit Vorsatzschneidgerät benutzen",
         "c": "Keine losen Teile ungesichert abschneiden",
@@ -939,7 +939,7 @@
 }, {
     "nr": 84,
     "frage": "Welche Arten von Trennschleifern gibt es und was muss im Einsatz aus Sicherheitsgründen beachtet werden?",
-    "antworten": {
+    "auswahl": {
         "a": "Motor- und Elektrotrennschleifer",
         "b": "Brandschutz sicherstellen",
         "c": "Trennscheibe mit geringer Drehzahl ansetzen",
@@ -952,7 +952,7 @@
 }, {
     "nr": 85,
     "frage": "Wie ist zu reagieren, wenn ein Truppangehöriger im Innenangriff verunfallt und Verstärkung zur Rettung benötigt wird?",
-    "antworten": {
+    "auswahl": {
         "a": "Übernahme des Handsprechfunkgerätes",
         "b": "Druckkontrolle des eigenen Atemschutzgerät und des Atemschutzgerätes des Verunfallten",
         "c": "Notfallmeldung mit dem Kennwort: \"Mayday\" per Funk eindeutig kennzeichnen",
@@ -962,7 +962,7 @@
 }, {
     "nr": 86,
     "frage": "Welche Aufgaben sind dem Atemschutzgeräteträger zuzuordnen?",
-    "antworten": {
+    "auswahl": {
         "a": "Sicherstellung der Atemschutzüberwachung",
         "b": "Gerätesichtprüfung",
         "c": "Einsatzkurzprüfung vor dem Einsatz",
@@ -975,7 +975,7 @@
 }, {
     "nr": 87,
     "frage": "Was ist bei der Suche nach vermissten Personen in verrauchten Räumen zu beachten?",
-    "antworten": {
+    "auswahl": {
         "a": "Sämtliche Fenster öffnen, um die Sichtbehinderung zu verringern",
         "b": "Systematische Suche in eine Richtung (links oder rechts)",
         "c": "In größeren Räumen eine fächerförmige Suche durchführen",
@@ -986,7 +986,7 @@
 }, {
     "nr": 88,
     "frage": "Welche Aussage ist richtig?",
-    "antworten": {
+    "auswahl": {
         "a": "Bei jedem Atemschutzeinsatz mit Isoliergeräten und bei jeder Übung mit Isoliergeräten muss grundsätzlich eine Atemschutzüberwachung durchgeführt werden.",
         "b": "Bei Übungen mit Isoliergeräten kann auf eine Atemschutzüberwachung verzichtet werden."
     },
@@ -994,7 +994,7 @@
 }, {
     "nr": 89,
     "frage": "Wer ist Verantwortlich für die Atemschutzüberwachung?",
-    "antworten": {
+    "auswahl": {
         "a": "Verantwortliche Führungskraft im Einsatz",
         "b": "Gruppenführer",
         "c": "Staffelführer",
@@ -1004,7 +1004,7 @@
 }, {
     "nr": 90,
     "frage": "Im Bereich der Absturzsicherung spricht man von \"Halten\" und \"Auffangen\". Wo liegt der Unterschied?",
-    "antworten": {
+    "auswahl": {
         "a": "Es gibt kein Unterschied",
         "b": "Der Unterschied liegt in den verwendeten Seilen (Halten - Feuerwehrhalteleine; Auffangen - Kernmanteldynamikseil)",
         "c": "Halten ist sichern an einer straff geführten Leine. Die Leine kommt immer von oberhalb der zu sichernden Person. Ein freier Fall ist auszuschließen",
