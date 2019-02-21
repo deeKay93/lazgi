@@ -20,7 +20,7 @@ function jsonToState(json = mannschaft) {
 const defaultState: AufgabenState = jsonToState(mannschaft);
 
 export function aufgabenReducer(state: AufgabenState = defaultState, action: AnswerAction): AufgabenState {
-	return produce(state, (draft) => {});
+	return state;
 }
 
 // function checkAnswer(frage: Frage) {

@@ -1,25 +1,43 @@
 import produce from 'immer';
 import { AnswerAction, ANSWER_ADD, ANSWER_REMOVE } from '../actions/AntwortenActions';
 import { AntwortenState } from '../types';
+import { stat } from 'fs';
 
 const defaultState: AntwortenState = {};
 
 export function antwortenReducer(state: AntwortenState = defaultState, action: AnswerAction): AntwortenState {
 	console.time('bla');
-	const res = produce(state, (draft) => {
-		switch (action.type) {
-			case ANSWER_ADD:
-				if (draft[action.frage]) {
-					draft[action.frage].push(action.antwort);
-				} else {
-					draft[action.frage] = [ action.antwort ];
-				}
-				break;
-			case ANSWER_REMOVE:
-				draft[action.frage] = draft[action.frage].filter((a) => a !== action.antwort);
-				break;
-		}
-	});
+	let res: AntwortenState;
+	switch (action.type) {
+		case ANSWER_ADD:
+			res = {
+				...state,
+				[action.frage]: [ action.antwort ].concat(state[action.frage])
+			};
+			break;
+		case ANSWER_REMOVE:
+			res = {
+				...state,
+				[action.frage]: state[action.frage].filter((a) => a !== action.antwort)
+			};
+			break;
+		default:
+			res = state;
+	}
+	// const res = produce(state, (draft) => {
+	// 	switch (action.type) {
+	// 		case ANSWER_ADD:
+	// 			if (draft[action.frage]) {
+	// 				draft[action.frage].push(action.antwort);
+	// 			} else {
+	// 				draft[action.frage] = [ action.antwort ];
+	// 			}
+	// 			break;
+	// 		case ANSWER_REMOVE:
+	// 			draft[action.frage] = draft[action.frage].filter((a) => a !== action.antwort);
+	// 			break;
+	// 	}
+	// });
 	console.timeEnd('bla');
 
 	return res;

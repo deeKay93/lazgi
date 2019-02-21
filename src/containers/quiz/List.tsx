@@ -36,16 +36,18 @@ class List extends Component<Props> {
 		const { aufgaben, antworten } = this.props;
 		return (
 			<div>
-				{Object.values(aufgaben).map((aufgabe) => (
-					<AufgabenCard
-						key={aufgabe.nr}
-						aufgabe={aufgabe}
-						antwort={antworten[aufgabe.nr] || []}
-						select={this.props.select}
-						unselect={this.props.unselect}
-						check={this.props.check}
-					/>
-				))}
+				{Object.values(aufgaben)
+					.slice(0, 90)
+					.map((aufgabe) => (
+						<AufgabenCard
+							key={aufgabe.nr}
+							aufgabe={aufgabe}
+							antwort={antworten[aufgabe.nr] || []}
+							select={this.props.select}
+							unselect={this.props.unselect}
+							check={this.props.check}
+						/>
+					))}
 			</div>
 		);
 	}
