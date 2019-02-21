@@ -5,6 +5,7 @@ export interface StoreState {
 
 export interface UiState {
   sidepanelOpen: boolean;
+  selectedAufgabe: number;
 }
 
 export interface Frage {
@@ -17,7 +18,7 @@ export interface Frage {
   korrekt: boolean;
 }
 
-export type FragenListe = Array<Frage>;
+export type FragenListe = { [key: string]: Frage };
 
 export interface QuizState {
   fragen: FragenListe;

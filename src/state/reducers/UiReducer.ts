@@ -1,11 +1,10 @@
-import { UIAction, UI_OPEN_SIDEPANEL, UI_CLOSE_SIDEPANEL } from "../actions/UiActions";
+import { UIAction, UI_OPEN_SIDEPANEL, UI_CLOSE_SIDEPANEL, UI_SELECT_AUFGABE } from "../actions/UiActions";
 import { UiState } from "../types";
 
-
-
-const defaultState = {
-    sidepanelOpen: false
-}
+const defaultState: UiState = {
+  sidepanelOpen: false,
+  selectedAufgabe: 1
+};
 
 export function uiReducer(state: UiState = defaultState, action: UIAction): UiState {
   switch (action.type) {
@@ -14,10 +13,10 @@ export function uiReducer(state: UiState = defaultState, action: UIAction): UiSt
         ...state,
         sidepanelOpen: true
       };
-    case UI_CLOSE_SIDEPANEL:
+    case UI_SELECT_AUFGABE:
       return {
         ...state,
-        sidepanelOpen: false
+        selectedAufgabe: action.aufgabe
       };
   }
   return state;
