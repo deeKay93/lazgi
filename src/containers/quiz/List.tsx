@@ -65,23 +65,13 @@ class AufgabenListe extends Component<Props> {
     return (
       <div className={classes.root}>
         <AufgabenCard frage={aufgabe} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />
-        <MobileStepper
-          steps={listAufgaben.length}
-          position="static"
-          activeStep={selectedIndex}
-          className={""}
-          nextButton={
-            <Button size="small" onClick={this.handleNext} disabled={selectedIndex === listAufgaben.length - 1}>
-              Next <KeyboardArrowRight />
-            </Button>
-          }
-          backButton={
-            <Button size="small" onClick={this.handleBack} disabled={selectedIndex === 0}>
-              <KeyboardArrowLeft />
-              Back
-            </Button>
-          }
-        />
+        <Button size="small" onClick={this.handleBack} disabled={selectedIndex === 0}>
+          <KeyboardArrowLeft />
+          Zurück
+        </Button>
+        <Button size="small" onClick={this.handleNext} disabled={selectedIndex === listAufgaben.length - 1}>
+          Weiter <KeyboardArrowRight />
+        </Button>
       </div>
     );
   }

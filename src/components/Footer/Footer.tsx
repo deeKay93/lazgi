@@ -1,12 +1,12 @@
-import { AppBar, IconButton, Toolbar, Typography, withStyles, WithStyles, createStyles } from "@material-ui/core";
+import { AppBar, IconButton, Toolbar, Typography, withStyles, WithStyles, createStyles, Card, Grid, Paper } from "@material-ui/core";
 import React, { Component } from "react";
 import SidepanelButton from "../../containers/Sidepanel/SidepanelButton";
 import CompactList from "../../containers/quiz/CompactList";
 
 const styles = createStyles({
-  appBar: {
-    top: "auto",
-    bottom: 0
+  control: {
+    margin: 10,
+    padding: 10
   }
 });
 
@@ -16,11 +16,9 @@ class Footer extends Component<Props> {
   render() {
     const { classes } = this.props;
     return (
-      <AppBar position="fixed" color="default" className={classes.appBar}>
-        <Toolbar>
-          <CompactList />
-        </Toolbar>
-      </AppBar>
+      <Paper className={classes.control}>
+        <CompactList />
+      </Paper>
     );
   }
 }

@@ -4,10 +4,10 @@ import { Card, CardHeader, Avatar, CardContent, Typography, withStyles, WithStyl
 import CheckIcon from "@material-ui/icons/Check";
 import pink from "@material-ui/core/colors/pink";
 import green from "@material-ui/core/colors/green";
+import { blue } from "@material-ui/core/colors";
 
 const styles = createStyles({
   card: {
-    maxWidth: "50%",
     margin: 10
   },
   header: {
@@ -22,7 +22,8 @@ const styles = createStyles({
   },
   listItem: {
     paddingTop: 0,
-    paddingBottom: 0
+    paddingBottom: 0,
+    alignItems: "flex-start"
   },
   leftIcon: {
     marginRight: 5
@@ -45,6 +46,28 @@ const styles = createStyles({
   },
   correctItem: {
     backgroundColor: green[100]
+  },
+  checkBoxBase: {
+    color: blue[600],
+    "&$checked": {
+      color: blue[500]
+    }
+  },
+  wrongCheckBox: {
+    color: pink[600],
+    "&$checked": {
+      color: pink[500]
+    }
+  },
+  correctCheckBox: {
+    color: green[600],
+    "&$checked": {
+      color: green[500]
+    }
+  },
+  checked: {},
+  itemText: {
+    padding: 12
   }
 });
 
@@ -70,16 +93,24 @@ class Frage extends Component<Props> {
       antwortKorrekt = selected ? loesungen.indexOf(antwort) > -1 : loesungen.indexOf(antwort) === -1;
     }
     return (
-      <ListItem
-        disabled={geprueft}
-        className={`${classes.listItem} ${!geprueft ? "" : antwortKorrekt ? classes.correctItem : classes.wrongItem}`}
-        key={antwort}
-        button
-        onClick={() => (selected ? unselect(nr, antwort) : select(nr, antwort))}
-      >
-        <Checkbox checked={selected} />
-        <ListItemText primary={antwort + ") " + auswahl[antwort]} />
-      </ListItem>
+      <div key={antwort}>
+        <ListItem
+          disabled={geprueft}
+          className={`${classes.listItem} ${!geprueft ? "" : antwortKorrekt ? classes.correctItem : classes.wrongItem}`}
+          button
+          onClick={() => (selected ? unselect(nr, antwort) : select(nr, antwort))}
+        >
+          <Checkbox
+            classes={{
+              root: `${!geprueft ? classes.checkBoxBase : antwortKorrekt ? classes.correctCheckBox : classes.wrongCheckBox}`,
+              checked: classes.checked
+            }}
+            checked={selected}
+          />
+          <ListItemText className={classes.itemText} primary={antwort + ") " + auswahl[antwort]} />
+        </ListItem>
+        <Divider />
+      </div>
     );
   }
 

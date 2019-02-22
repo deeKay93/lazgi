@@ -13,6 +13,11 @@ export function uiReducer(state: UiState = defaultState, action: UIAction): UiSt
         ...state,
         sidepanelOpen: true
       };
+    case UI_CLOSE_SIDEPANEL:
+      return {
+        ...state,
+        sidepanelOpen: false
+      };
     case UI_SELECT_AUFGABE:
       return {
         ...state,

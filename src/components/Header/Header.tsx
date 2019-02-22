@@ -1,6 +1,7 @@
-import { AppBar, IconButton, Toolbar, Typography, withStyles, WithStyles, createStyles } from "@material-ui/core";
+import { AppBar, IconButton, Toolbar, Typography, withStyles, WithStyles, createStyles, Button } from "@material-ui/core";
 import React, { Component } from "react";
 import SidepanelButton from "../../containers/Sidepanel/SidepanelButton";
+import CheckIcon from "@material-ui/icons/PlaylistAddCheck";
 
 const styles = createStyles({
   root: {
@@ -8,6 +9,10 @@ const styles = createStyles({
   },
   grow: {
     flexGrow: 1
+  },
+
+  leftIcon: {
+    marginRight: 5
   }
 });
 
@@ -21,8 +26,12 @@ class Header extends Component<Props> {
         <Toolbar>
           <SidepanelButton />
           <Typography variant="h6" color="inherit" className={classes.grow}>
-            News
+            LAZ Gold
           </Typography>
+          <Button color="inherit">
+            <CheckIcon className={classes.leftIcon} />
+            Alle Prüfen
+          </Button>
         </Toolbar>
       </AppBar>
     );
