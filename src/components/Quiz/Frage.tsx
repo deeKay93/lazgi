@@ -5,6 +5,7 @@ import CheckIcon from "@material-ui/icons/Check";
 import pink from "@material-ui/core/colors/pink";
 import green from "@material-ui/core/colors/green";
 import { blue } from "@material-ui/core/colors";
+import Mousetrap from "mousetrap";
 
 const styles = createStyles({
   card: {
@@ -94,12 +95,7 @@ class Frage extends Component<Props> {
     }
     return (
       <div key={antwort}>
-        <ListItem
-          disabled={geprueft}
-          className={`${classes.listItem} ${!geprueft ? "" : antwortKorrekt ? classes.correctItem : classes.wrongItem}`}
-          button
-          onClick={() => (selected ? unselect(nr, antwort) : select(nr, antwort))}
-        >
+        <ListItem disabled={geprueft} className={`${classes.listItem} ${!geprueft ? "" : antwortKorrekt ? classes.correctItem : classes.wrongItem}`} button onClick={() => this.onItemClick(antwort)}>
           <Checkbox
             classes={{
               root: `${!geprueft ? classes.checkBoxBase : antwortKorrekt ? classes.correctCheckBox : classes.wrongCheckBox}`,
@@ -112,6 +108,53 @@ class Frage extends Component<Props> {
         <Divider />
       </div>
     );
+  }
+
+  onItemClick(antwort: string) {
+    const {
+      frage: { nr, auswahl, antworten, geprueft, korrekt, loesungen },
+      classes,
+      select,
+      unselect
+    } = this.props;
+    const selected = antworten.indexOf(antwort) > -1;
+    selected ? unselect(nr, antwort) : select(nr, antwort);
+  }
+
+  keyList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "ß"];
+
+  bindKeys() {
+    const {
+      frage: { nr, auswahl },
+      check
+    } = this.props;
+    Object.keys(auswahl).forEach((k, i) => {
+      Mousetrap.bind(this.keyList[i], () => this.onItemClick(k));
+    });
+    Mousetrap.bind("enter", () => check(nr));
+  }
+
+  unbindKeys() {
+    const {
+      frage: { auswahl }
+    } = this.props;
+    Object.keys(auswahl).forEach((k, i) => {
+      Mousetrap.unbind(this.keyList[i]);
+    });
+    Mousetrap.unbind("enter");
+  }
+
+  componentDidMount() {
+    this.bindKeys();
+  }
+  componentWillUnmount() {
+    this.unbindKeys();
+  }
+  componentWillUpdate() {
+    this.unbindKeys();
+  }
+  componentDidUpdate() {
+    this.bindKeys();
   }
 
   render() {

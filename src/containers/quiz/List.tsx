@@ -8,6 +8,7 @@ import { StoreState, FragenListe, Frage } from "../../state/types";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import { selectAufgabe, UIAufgabenAction } from "../../state/actions/UiActions";
+import Mousetrap from "mousetrap";
 
 const styles = createStyles({
   root: {
@@ -48,23 +49,34 @@ interface Props extends WithStyles<typeof styles> {
 class AufgabenListe extends Component<Props> {
   handleNext = () => {
     const { listAufgaben, selectedAufgabe, changeAufgabe } = this.props;
-    const currentIndex = listAufgaben.indexOf(selectedAufgabe);
-    const nextIndex = listAufgaben[currentIndex + 1];
-    changeAufgabe(nextIndex);
+    const currentAufgabe = listAufgaben.indexOf(selectedAufgabe);
+    const nextIndex = currentAufgabe + 1;
+    const nextAufgabe = listAufgaben[nextIndex >= listAufgaben.length ? listAufgaben.length - 1 : nextIndex];
+    changeAufgabe(nextAufgabe);
   };
 
   handleBack = () => {
     const { listAufgaben, selectedAufgabe, changeAufgabe } = this.props;
-    const currentIndex = listAufgaben.indexOf(selectedAufgabe);
-    const nextIndex = listAufgaben[currentIndex - 1];
-    changeAufgabe(nextIndex);
+    const currentAufgabe = listAufgaben.indexOf(selectedAufgabe);
+    const nextIndex = currentAufgabe - 1;
+    const nextAufgabe = listAufgaben[nextIndex < 0 ? 0 : nextIndex];
+    changeAufgabe(nextAufgabe);
   };
+
+  componentDidMount() {
+    Mousetrap.bind("left", this.handleBack);
+    Mousetrap.bind("right", this.handleNext);
+  }
+  componentWillUnmount() {
+    Mousetrap.unbind("left");
+    Mousetrap.unbind("right");
+  }
 
   render() {
     const { aufgabe, classes, listAufgaben, selectedIndex } = this.props;
     return (
       <div className={classes.root}>
-        <AufgabenCard frage={aufgabe} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />
+        <AufgabenCard frage={aufgabe} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />;
         <Button size="small" onClick={this.handleBack} disabled={selectedIndex === 0}>
           <KeyboardArrowLeft />
           Zurück
