@@ -74,7 +74,7 @@ const styles = createStyles({
 
 export interface Props extends WithStyles<typeof styles> {
   frage: iFrage;
-  // check: (frage: number) => void;
+  enableKeys?: boolean;
   select: (frage: number, antwort: string) => void;
   unselect: (frage: number, antwort: string) => void;
   check: (frage: number) => void;
@@ -112,8 +112,7 @@ class Frage extends Component<Props> {
 
   onItemClick(antwort: string) {
     const {
-      frage: { nr, auswahl, antworten, geprueft, korrekt, loesungen },
-      classes,
+      frage: { nr, antworten },
       select,
       unselect
     } = this.props;
@@ -126,8 +125,10 @@ class Frage extends Component<Props> {
   bindKeys() {
     const {
       frage: { nr, auswahl },
-      check
+      check,
+      enableKeys
     } = this.props;
+    if (!enableKeys) return;
     Object.keys(auswahl).forEach((k, i) => {
       Mousetrap.bind(this.keyList[i], () => this.onItemClick(k));
     });
@@ -136,8 +137,10 @@ class Frage extends Component<Props> {
 
   unbindKeys() {
     const {
-      frage: { auswahl }
+      frage: { auswahl },
+      enableKeys
     } = this.props;
+    if (!enableKeys) return;
     Object.keys(auswahl).forEach((k, i) => {
       Mousetrap.unbind(this.keyList[i]);
     });

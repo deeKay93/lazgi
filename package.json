@@ -27,6 +27,7 @@
     "react-dom": "^16.8.2",
     "react-redux": "^6.0.0",
     "react-scripts": "2.1.5",
+    "react-swipe": "^6.0.4",
     "redux": "^4.0.1",
     "typescript": "3.3.3"
   },
@@ -49,6 +50,7 @@
   ],
   "devDependencies": {
     "@types/mousetrap": "^1.6.1",
+    "@types/react-swipe": "^6.0.0",
     "gh-pages": "^2.0.1"
   }
 }

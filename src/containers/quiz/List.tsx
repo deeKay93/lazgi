@@ -9,6 +9,7 @@ import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import { selectAufgabe, UIAufgabenAction } from "../../state/actions/UiActions";
 import Mousetrap from "mousetrap";
+import ReactSwipe from "react-swipe";
 
 const styles = createStyles({
   root: {
@@ -19,7 +20,7 @@ const styles = createStyles({
 function mapStateToProps({ quiz: { fragen }, ui: { selectedAufgabe } }: StoreState) {
   const listAufgaben = Object.keys(fragen).map(x => parseInt(x));
   return {
-    aufgabe: fragen[selectedAufgabe],
+    aufgaben: fragen,
     selectedAufgabe,
     listAufgaben,
     selectedIndex: listAufgaben.indexOf(selectedAufgabe)
@@ -36,7 +37,7 @@ function mapDispatchToProps(dispatch: Dispatch<AnswerAction | UIAufgabenAction>)
 }
 
 interface Props extends WithStyles<typeof styles> {
-  aufgabe: Frage;
+  aufgaben: FragenListe;
   listAufgaben: number[];
   selectedAufgabe: number;
   selectedIndex: number;
@@ -48,19 +49,15 @@ interface Props extends WithStyles<typeof styles> {
 
 class AufgabenListe extends Component<Props> {
   handleNext = () => {
-    const { listAufgaben, selectedAufgabe, changeAufgabe } = this.props;
-    const currentAufgabe = listAufgaben.indexOf(selectedAufgabe);
-    const nextIndex = currentAufgabe + 1;
-    const nextAufgabe = listAufgaben[nextIndex >= listAufgaben.length ? listAufgaben.length - 1 : nextIndex];
-    changeAufgabe(nextAufgabe);
+    if (this.reactSwipeRef) {
+      this.reactSwipeRef.next();
+    }
   };
 
   handleBack = () => {
-    const { listAufgaben, selectedAufgabe, changeAufgabe } = this.props;
-    const currentAufgabe = listAufgaben.indexOf(selectedAufgabe);
-    const nextIndex = currentAufgabe - 1;
-    const nextAufgabe = listAufgaben[nextIndex < 0 ? 0 : nextIndex];
-    changeAufgabe(nextAufgabe);
+    if (this.reactSwipeRef) {
+      this.reactSwipeRef.prev();
+    }
   };
 
   componentDidMount() {
@@ -72,11 +69,37 @@ class AufgabenListe extends Component<Props> {
     Mousetrap.unbind("right");
   }
 
+  getIndex(index: number) {
+    const { listAufgaben } = this.props;
+    return (index + listAufgaben.length) % listAufgaben.length;
+  }
+
+  reactSwipeRef: ReactSwipe | null = null;
+
   render() {
-    const { aufgabe, classes, listAufgaben, selectedIndex } = this.props;
+    const { aufgaben, classes, listAufgaben, selectedIndex, changeAufgabe } = this.props;
+
     return (
       <div className={classes.root}>
-        <AufgabenCard frage={aufgabe} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />;
+        <ReactSwipe
+          ref={el => (this.reactSwipeRef = el)}
+          swipeOptions={{
+            startSlide: 1,
+            callback: index => {
+              changeAufgabe(listAufgaben[this.getIndex(selectedIndex + index - 1)]);
+            }
+          }}
+        >
+          <div>
+            <AufgabenCard frage={aufgaben[listAufgaben[this.getIndex(selectedIndex - 1)]]} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />
+          </div>
+          <div>
+            <AufgabenCard enableKeys frage={aufgaben[listAufgaben[selectedIndex]]} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />
+          </div>
+          <div>
+            <AufgabenCard frage={aufgaben[listAufgaben[this.getIndex(selectedIndex + 1)]]} select={this.props.select} unselect={this.props.unselect} check={this.props.check} />
+          </div>
+        </ReactSwipe>
         <Button size="small" onClick={this.handleBack} disabled={selectedIndex === 0}>
           <KeyboardArrowLeft />
           Zurück

@@ -3,7 +3,7 @@ import { UiState } from "../types";
 
 const defaultState: UiState = {
   sidepanelOpen: false,
-  selectedAufgabe: 1
+  selectedAufgabe: 3
 };
 
 export function uiReducer(state: UiState = defaultState, action: UIAction): UiState {
